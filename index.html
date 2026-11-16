@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#252a31">
+<title>SSN 24 — визитка</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: grid; place-items: center;
+    padding: 24px; background: radial-gradient(circle at top, #454b54, #15191f 70%);
+    font-family: Arial, Helvetica, sans-serif; color: #20252b;
+  }
+  .card {
+    width: min(100%, 900px); min-height: 360px; display: flex; align-items: center;
+    gap: 24px; padding: 28px; border-radius: 22px;
+    background: linear-gradient(145deg, #f1f2f3, #aeb4bb 55%, #e2e5e8);
+    border: 1px solid #fff9; box-shadow: 0 24px 70px #0008, inset 0 1px 0 #fff;
+  }
+  .links {
+    flex: 1; display: flex; justify-content: center; align-items: center;
+    flex-wrap: wrap; gap: 12px; min-width: 0;
+  }
+  .links a {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 54px; padding: 12px 17px; border-radius: 10px;
+    color: white; text-decoration: none; font-size: 15px; font-weight: 700;
+    background: linear-gradient(180deg, #ef3d45, #b5101c);
+    border: 1px solid #ff777d; box-shadow: 0 5px 0 #780b13, 0 8px 15px #5d101b40;
+    transition: transform .15s ease, filter .15s ease;
+    white-space: nowrap;
+  }
+  .links a:hover { transform: translateY(-2px); filter: brightness(1.08); }
+  .links a:active { transform: translateY(2px); box-shadow: 0 2px 0 #780b13; }
+  .mascot {
+    width: min(38%, 290px); flex: 0 0 auto; display: block;
+    border-radius: 14px; object-fit: contain;
+  }
+  .caption {
+    width: min(100%, 900px); margin: 14px auto 0; text-align: center;
+    color: #cbd0d6; font-size: 12px; letter-spacing: .08em;
+  }
+  @media (max-width: 650px) {
+    .card { flex-direction: column-reverse; gap: 20px; padding: 20px; }
+    .mascot { width: min(70%, 230px); }
+    .links { width: 100%; }
+    .links a { flex: 1 1 42%; white-space: normal; text-align: center; }
+  }
+</style>
+</head>
+<body>
+  <main>
+    <section class="card" aria-label="Электронная визитная карточка SSN 24">
+      <nav class="links" aria-label="Ссылки">
+        <a href="https://bender-search.ru/" target="_blank" rel="noopener noreferrer">Bender-Search.ru ↗</a>
+        <a href="https://benderhub.ru/" target="_blank" rel="noopener noreferrer">BenderHub.ru ↗</a>
+        <a href="https://ssn-24.ru/" target="_blank" rel="noopener noreferrer">ssn-24.ru ↗</a>
+        <a href="https://ssn247.ru/" target="_blank" rel="noopener noreferrer">ssn247.ru ↗</a>
+      </nav>
+      <img class="mascot" alt="Бендер в образе мафиозного босса за столом с пачками долларов" src="ssn24_bender_mafia.png">
+    </section>
+    <p class="caption">SSN 24 · ЭЛЕКТРОННАЯ ВИЗИТКА</p>
+  </main>
+</body>
+</html>
